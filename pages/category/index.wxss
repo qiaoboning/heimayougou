@@ -1,0 +1,44 @@
+/* pages/category/index.wxss */
+page{
+  height:100%;
+}
+.category{
+  height:100%;
+}
+.category .cates_container{
+  height:calc(100vh - 90rpx);
+  display: flex;
+  /* background-color: aqua; */
+}
+.left_menu{
+  flex:2;
+  text-align: center;
+}
+.right_content{
+  flex: 5;
+  /* background-color: thistle; */
+}
+.menu_item{
+  height:80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+.active{
+  color:var(--themeColor);
+  border-left: 5rpx solid currentColor;
+}
+.goods_list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.goods_list navigator{
+  width: 33%;
+  text-align: center;
+}
+.goods_list navigator image{
+  width: 50%;
+}
+.goods_title{
+  text-align: center;
+  padding:40rpx;
+}

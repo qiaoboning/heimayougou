@@ -1,0 +1,40 @@
+<view class="pyg_index">
+  <SearchInput></SearchInput>
+</view>
+<!-- 轮播图 -->
+<view class="index_banner">
+  <swiper autoplay circular indicator-dots>
+    <swiper-item wx:for="{{bannerList}}" wx:key="goods_id">
+      <navigator>
+        <image mode="widthFix" src="{{item.image_src}}"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="index_cate">
+  <navigator wx:for="{{categoryList}}" wx:key="name">
+    <image src="{{item.image_src}}" mode="widthFix"></image>
+  </navigator>
+</view>
+<view class="index_floor">
+  <view class="floor_group" 
+  wx:for="{{floorList}}" 
+  wx:key="floor_title"
+  wx:for-item="item1"
+  wx:for-index="index1">
+    <!-- 标题 -->
+    <view class="floor_title">
+      <image src="{{item1.floor_title.image_src}}" mode="widthFix"></image>
+    </view>
+    <!-- 内容 -->
+    <view class="floor_list">
+      <navigator 
+      wx:for="{{item1.product_list}}" 
+      wx:key="name"
+      wx:for-item="item2"
+      wx:for-index="index2">
+        <image src="{{item2.image_src}}" mode="widthFix"></image>
+      </navigator>
+    </view>
+  </view>
+</view>
