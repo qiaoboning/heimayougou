@@ -5,7 +5,7 @@
       <image mode="widthFix" src="{{item.pics_mid}}"></image>
     </swiper-item>
   </swiper>
-  <view class="goods_price">￥{{goosDetailData.goods_price}}</view>
+  <view class="goods_price">${{goosDetailData.goods_price}}</view>
   <view class="goods_name_row">
     <view class="goods_name">{{goosDetailData.goods_name}}</view>
     <view class="goods_collect">
