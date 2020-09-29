@@ -1,4 +1,7 @@
 /* pages/goods_detail/index.wxss */
+page{
+  padding-bottom:90rpx;
+}
 .goods_detail_swiper{
   height:50vh;
   text-align: center;
@@ -26,4 +29,50 @@
 .goods_collect{
   flex: 1;
   text-align: center;
+}
+.tools_bottom{
+  position: fixed;
+  left:0;
+  bottom:0;
+  display: flex;
+  justify-content: space-between; 
+  height:90rpx; 
+  width:100%;
+  background-color: #fff;
+  font-size: 22rpx;
+  border-top: 2rpx solid #ccc;
+}
+.tools_item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex:1;
+  position: relative;
+}
+.tools_item button{
+  position: absolute;
+  left:0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+.btn_cart{
+  display: flex;
+  flex: 2;
+  height:100%;
+  background-color: #ffa500;
+  font-size: 28rpx;
+  color:#fff;
+  font-weight: 600;
+}
+.btn_buy{
+  display: flex;
+  flex: 2;
+  height:100%;
+  background-color: #eb4450;
+  font-size: 28rpx;
+  color:#fff;
+  font-weight: 600;
 }

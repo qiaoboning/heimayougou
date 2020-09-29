@@ -7,7 +7,33 @@ Page({
    */
   data: {
     goods_id:'',
-    goosDetailData:[]
+    goosDetailData:[],
+  },
+  goodsInfo:[],
+  // 事件监听
+  handlePreviewImage(e){
+    let urls = this.goodsInfo.pics.map(v=>v.pics_mid);
+    wx.previewImage({
+      current: e.currentTarget.dataset.url, 
+      urls: urls
+    })
+  },
+  //加入购物车
+  handleCartAdd(){
+    //查看缓存中是否有该商品，无则新增，有则该商品数量++,第一次获取无缓存返回空字符串，转为[]
+    let cartArr = wx.getStorageSync('cart')||[];
+    let index = cartArr.findIndex(v=>v.goods_id==this.data.goods_id);
+    if(index==-1){
+      this.goodsInfo.goods_num=1;
+      cartArr.push(this.goodsInfo)
+    }else{
+      cartArr[index].goods_num++;
+    }
+    wx.setStorageSync('cart', cartArr);
+    wx-wx.showToast({
+      title: '加购成功',
+      mask: true
+    })
   },
   // 网络请求
   async getGoodsDetailData(){
@@ -17,6 +43,7 @@ Page({
         goods_id:this.data.goods_id
       }
     })
+    this.goodsInfo = res;
     this.setData({
       goosDetailData:res
     })
