@@ -32,7 +32,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.2",
-	"appid": "wx9cca9ab2b412f692",
+	"appid": "wx09d9d23bcb7948e4",
 	"projectname": "%E6%96%B0%E8%A7%86%E8%A7%89%E6%A1%88%E4%BE%8B",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -111,6 +111,13 @@
 					"id": -1,
 					"name": "购物车",
 					"pathName": "pages/cart/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/pay/index",
+					"pathName": "pages/pay/index",
 					"scene": null
 				}
 			]

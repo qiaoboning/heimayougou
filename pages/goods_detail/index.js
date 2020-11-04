@@ -25,6 +25,7 @@ Page({
     let index = cartArr.findIndex(v=>v.goods_id==this.data.goods_id);
     if(index==-1){
       this.goodsInfo.goods_num=1;
+      this.goodsInfo.checked=true;
       cartArr.push(this.goodsInfo)
     }else{
       cartArr[index].goods_num++;
